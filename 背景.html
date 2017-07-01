@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        div {
+            float: left;
+            margin: 20px 0 0 20px;
+        }
+
+        #box1 {
+
+            width: 100px;
+            height: 100px;
+            padding: 50px;
+            border: 5px dashed green;
+            background-color: red;
+        }
+
+        #box2 {
+            width: 100px;
+            height: 100px;
+            padding: 50px;
+            border: 5px dashed green;
+            background-color: red;
+            background-clip: content-box;
+            /*可以修改背景区域，背景颜色不填充padding*/
+        }
+
+        #box3 {
+            width: 100px;
+            height: 100px;
+            padding: 50px;
+            border: 5px dashed green;
+            background-color: red;
+            background-clip: padding-box;
+            /*背景裁切*/
+            /*以padding为界限，以context为界限，以border为界限*/
+            /*background-clip: border-box;*/
+            /*默认值是border-box，背景颜色填充padding*/
+        }
+
+        #box4 {
+            width: 100px;
+            height: 100px;
+            padding: 50px;
+            border: 5px dashed green;
+            background: red url(images/border.png) no-repeat;
+        }
+
+        #box5 {
+            width: 100px;
+            height: 100px;
+            padding: 50px;
+            border: 5px dashed green;
+            background: red url(images/border.png) no-repeat;
+            background-origin: border-box;
+        }
+
+        #box6 {
+            width: 100px;
+            height: 100px;
+            padding: 50px;
+            border: 5px dashed green;
+            background: red url(images/border.png) no-repeat;
+            background-origin: content-box;
+            /*默认值是padding-box*/
+            /*属性规定背景图片的定位区域。*/
+        }
+
+        #box7 {
+            width: 100px;
+            height: 100px;
+            padding: 50px;
+            border: 5px dashed green;
+            background: red url(images/border.png) no-repeat;
+            background-origin: content-box;
+            background-size: 100%;
+        }
+
+        #box8 {
+            width: 100px;
+            height: 200px;
+            background: red url(images/border.png) no-repeat;
+            background-size: cover;
+            /*背景覆盖,按照最大的边进行缩放*/
+        }
+
+        #box9 {
+            width: 100px;
+            height: 200px;
+            background: red url(images/border.png) no-repeat;
+            background-size: contain;
+            /*背景覆盖,按照最小的边进行缩放*/
+            /* background-size与 background-clip无关系的*/
+            /* background-size与 background-origin是一致的关系*/
+        }
+
+        #box10 {
+            width: 623px;
+            height: 417px;
+            background: url(images/bg1.png) no-repeat left top,
+            url(images/bg2.png) no-repeat top right,
+            url(images/bg3.png) no-repeat right bottom,
+            url(images/bg4.png) no-repeat left bottom,
+            url(images/bg5.png) no-repeat center center;
+            /*拼图，多张图片进行合成*/
+        }
+
+        #box11 {
+            position: relative;
+            width: 90px;
+            height: 90px;
+            padding: 20px;
+            background: red url(images/bg.jpg) no-repeat left top;
+            background-origin: padding-box;
+            /*使图片从padding中填充*/
+        }
+
+        #box11::before {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 90px;
+            background-color: #fff
+        }
+
+        #box11::after {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            content: "";
+            display: block;
+            width: 90px;
+            height: 90px;
+            background: url(images/bg.jpg) no-repeat center center;
+            /*图片从内容填充*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+    <div id="box5"></div>
+    <div id="box6"></div>
+    <div id="box7"></div>
+    <div id="box8"></div>
+    <div id="box9"></div>
+    <div id="box10"></div>
+    <div id="box11"></div>
+</body>
+
+</html>

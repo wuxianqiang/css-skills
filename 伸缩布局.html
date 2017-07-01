@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    ul li {
+        list-style: none;
+    }
+    #box {
+        height: 800px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .head {
+        height: 50px;
+        background-color: #000;
+    }
+    .cont {
+        display: flex;
+        /*属性是可以进行嵌套的*/
+        flex: 1;
+        /*占比是要减去已经设置了高的元素情况下，未设置的时候就可以自适应*/
+        background-color: #e1e1e1;
+    }
+    .conL {
+        flex: 1;
+        background-color: pink;
+    }
+    .conR {
+        flex: 2;
+    }
+    .fot {
+        height: 30px;
+        background-color: #000;
+    }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="head">头部</div>
+        <div class="cont">
+            <div class="conL">左边</div>
+            <div class="conR">右边</div>
+        </div>
+        <div class="fot">尾部</div>
+    </div>
+</body>
+</html>

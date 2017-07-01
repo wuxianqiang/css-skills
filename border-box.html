@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>盒模型</title>
+    <style type="text/css">
+    div {
+        float: left;
+        margin-left: 20px;
+    }
+    #box1{
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        background-color: red;
+        border: 5px solid green;
+        box-sizing: border-box;
+        /*类似IE低版本，盒模型包含padding,border*/
+    }
+    #box2{
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        background-color: red;
+        border: 5px solid green;
+        box-sizing: content-box;
+        /*content-box是默认值，不包含*/
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+</body>
+</html>

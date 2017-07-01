@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>边框图片</title>
+    <style type="text/css">
+        div {
+            float: left;
+            margin-left: 20px;
+        }
+
+        #box1 {
+            width: 100px;
+            height: 100px;
+            border-image-source: url(images/border.png);
+            border-image-slice: 27;
+            border-image-width: 10px;
+            /*默认图片是拉伸*/
+        }
+
+        #box2 {
+            width: 100px;
+            height: 100px;
+            border-image-source: url(images/border.png);
+            border-image-slice: 27;
+            border-image-width: 10px;
+            border-image-repeat: round;
+        }
+        #box3 {
+            width: 100px;
+            height: 100px;
+            border-image-source: url(images/border.png);
+            border-image-slice: 27;
+            border-image-width: 10px;
+            border-image-repeat: stretch;
+            /*图像边框是否应平铺(repeat会截断背景图片和round差不多，但round不会裁剪)、铺满(round)或拉伸(stretch)。*/
+        }
+        #box4 {
+            width: 100px;
+            height: 100px;
+            border-image-source: url(images/border.png);
+            border-image-slice: 27;
+            border-image-width: 10px;
+            border-image-repeat: repeat;
+        }
+
+        #box5 {
+            width: 100px;
+            height: 100px;
+            border-image-source: url(images/border.png);
+            border-image-slice: 27;
+            border-image-width: 10px;
+            border-image-repeat: round stretch;
+            /*分别进行不同边的设置*/
+        }
+        #box6 {
+            width: 100px;
+            height: 100px;
+            border-image-source: url(images/border.png);
+            border-image-slice: 27;
+            border-image-width: 10px;
+            border-image-repeat: round;
+            /*border-image-repeat只能移到两个参数*/
+        }
+        #box7 {
+            width: 100px;
+            height: 100px;
+            border-image-source: url(images/border.png);
+            border-image-slice: 27 40 40 27;
+            /*border-image-slice不加单位的，有四个参数，按照不同的尺寸裁剪*/
+            border-image-width: 10px;
+            border-image-repeat: round;
+            /*border-image-repeat只能移到两个参数*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+    <div id="box5"></div>
+    <div id="box6"></div>
+    <div id="box7"></div>
+    <div id="box8"></div>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        div {
+            float: left;
+            margin: 20px 0 0 20px;
+        }
+
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-image: radial-gradient(120px at center center, red, green);
+            /*120是扩散的范围，center，center是中心点*/
+        }
+
+        #box2 {
+            width: 200px;
+            height: 200px;
+            background-image: radial-gradient(120px at 40px 40px, red, green);
+            /*120是扩散的范围，center，center是中心点,可以是方位，也可以是像素，参照点是盒子的左上角*/
+        }
+
+        #box3 {
+            width: 200px;
+            height: 200px;
+            background-image: radial-gradient(100px 200px at 40px 40px, red, green);
+            /*1扩散的范围还可以是椭圆，center，center是中心点,可以是方位，也可以是像素，参照点是盒子的左上角*/
+        }
+
+        #box4 {
+            width: 200px;
+            height: 200px;
+            background-image: radial-gradient(circle at center center, red, green);
+            /*扩散的范围还可以是关键字circle是园，center，center是中心点,可以是方位，也可以是像素，参照点是盒子的左上角*/
+        }
+
+        #box5 {
+            width: 200px;
+            height: 400px;
+            background-image: radial-gradient(ellipse at center center, red, green);
+            /*扩散的范围还可以是关键字circle是圆、ellipse椭圆，center，center是中心点,可以是方位，也可以是像素，参照点是盒子的左上角*/
+        }
+
+        #box6 {
+            width: 200px;
+            height: 200px;
+            background-image: repeating-linear-gradient(yellow 10%, green 20%);
+        }
+
+        #box7 {
+            width: 200px;
+            height: 200px;
+            background-image: repeating-radial-gradient(yellow 10%, green 20%);
+        }
+
+        #box8 {
+            /*进度条*/
+            width: 180px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: skyblue;
+            background-image: linear-gradient(135deg, blue 25%, transparent 25%, transparent 50%, blue 50%, blue 75%, transparent 75%, transparent 100%);
+            background-size: 30px 30px;
+            /*background-repeat: no-repeat;*/
+        }
+
+        #box9 {
+            width: 200px;
+            height: 200px;
+            background-image: radial-gradient(#fff 10%, #000 20%);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+    <div id="box5"></div>
+    <div id="box6"></div>
+    <div id="box7"></div>
+    <div id="box8"></div>
+    <div id="box9"></div>
+
+</body>
+
+</html>

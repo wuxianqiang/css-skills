@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>渐变</title>
+    <style type="text/css">
+        div {
+            float: left;
+            margin: 20px 0 0 20px;
+        }
+
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(yellow, green, red);
+            /*线性渐变*/
+        }
+
+        #box2 {
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(90deg, yellow, green, red);
+            /*上方为0度,右边为90度*/
+        }
+
+        #box3 {
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(to left, yellow, green, red);
+            /*通过角度可以改变渐变方向，还可以用关键字来表示方向*/
+        }
+
+        #box4 {
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(to top left, yellow, green, red);
+            /*上方为0度,右边为90度*/
+        }
+
+        #box5 {
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(to top left, yellow 20%, green 30%, red 50%);
+            /*上方为0度,右边为90度*/
+        }
+
+        #box6 {
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(red, #000 50%);
+            /*上方为0度,右边为90度*/
+            /*0~50，50~100；两端*/
+        }
+
+        #box7 {
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(red 50%, #000 40%, green 80%);
+            /*上方为0度,右边为90度*/
+            /*0~50，50~100；两端*/
+        }
+        #box8 {
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(to left top,red 50%, #000 40%, green 80%);
+            /*上方为0度,右边为90度*/
+            /*0~50，50~100；两端*/
+        }
+        #box9 {
+            width: 200px;
+            height: 200px;
+            background-image: linear-gradient(to left top,red 50%, #000 40%, green 50%);
+            /*上方为0度,右边为90度*/
+            /*0~50，50~100；两端*/
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+    <div id="box5"></div>
+    <div id="box6"></div>
+    <div id="box7"></div>
+    <div id="box8"></div>
+    <div id="box9"></div>
+</body>
+
+</html>

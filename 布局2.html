@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>伸缩布局</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    ul li {
+        list-style: none;
+    }
+    #box {
+        /*第一步指定伸缩布局的盒子*/
+        display: flex;
+        /*第二步设置属性调整子元素的布局*/
+        /*调准主侧轴方向*/
+        flex-direction: row;
+        /*flex-direction: row-reverse;水平上逆转方向*/
+        /*flex-direction: column;*/
+        /*flex-direction: column-reverse;垂直方向逆转*/
+        /*justify-content: flex-start;并排居左*/
+        /*justify-content: flex-end;并排居右*/
+        /*justify-content: center;并排居中*/
+        /*justify-content: space-between;*/
+        justify-content: space-around;
+        /*两端对齐*/
+        /*align-items: flex-start;顶端对齐*/
+        /*align-items: flex-end;*/
+        /*低端对齐*/
+        /*align-items: center;居中对齐*/
+        /*align-items: baseline;*/
+        /*align-items: stretch;两端对齐*/
+        /*默认拉伸布局，未指定高的情况*/
+        /*flex-wrap: wrap;是否换行*/
+        flex-wrap: nowrap;
+        /*align-content: flex-end;*/
+    }
+    #box li {
+        /*margin: auto;*/
+        width: 100px;
+        background-color: pink;
+    }
+    #box li:nth-child(1){
+        /*order就是控制元素的顺序的*/
+        order: 1;
+        flex: 1;
+        /*控制元素的比例，分配的是父盒子剩余的空间，如果有一个子盒子设置了空间就应该减去，再进行分配*/
+    }
+    #box li:nth-child(2){
+        order: 3;
+        flex: 3;
+    }
+    #box li:nth-child(3){
+        order: 2;
+        flex: 1;
+    }
+    </style>
+</head>
+<body>
+    <ul id="box">
+        <li>11电风扇 阿飞11电风扇 阿飞11电风扇 阿飞11电风扇 阿飞11电风扇 阿飞11电风扇 阿飞11电风扇 阿飞</li>
+        <li>22</li>
+        <li>3311电风扇 阿飞11电风扇 阿飞11电风扇</li>
+    </ul>
+</body>
+</html>
